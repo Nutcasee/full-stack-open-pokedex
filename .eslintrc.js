@@ -4,7 +4,7 @@ module.exports = {
     "es6": true,
     "jest/globals": true,
     'commonjs': true,
-    'node': true
+    'node': true,
   },
   "extends": [
     "eslint:recommended",
