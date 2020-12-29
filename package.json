@@ -11,7 +11,8 @@
     "build": "webpack --mode production",
     "cypress:open": "cypress open",
     "test:e2e": "cypress run",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "heroku-prebuild": "npm install --dev"
   },
   "repository": {
     "type": "git",
