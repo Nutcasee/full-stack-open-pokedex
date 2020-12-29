@@ -9,4 +9,5 @@ app.use(express.static('dist'))
 app.listen(PORT, () => {
   /* eslint-disable no-alert, no-console */
   console.log('server started on port 5000')
+  console.log(`Server running on port ${PORT}`)
 })
