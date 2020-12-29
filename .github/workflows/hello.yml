@@ -8,6 +8,7 @@ on:
 jobs:
   hello_world_job:
     runs-on: ubuntu-18.04
+    if: ${{ github.event_name == 'push' }}
     steps:
       - name: Say hello
         run: |
