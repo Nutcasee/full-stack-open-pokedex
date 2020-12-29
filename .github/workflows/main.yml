@@ -17,3 +17,5 @@ jobs:
           heroku_email: "nexustivi@gmail.com"
           healthcheck: https://full-stack-pokedex-2020dec29.herokuapp.com/health
           checkstring: ok
+
+          rollbackonhealthcheckfailed: true
