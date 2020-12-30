@@ -26,7 +26,7 @@ jobs:
         if: contains(join(github.event.commits.*.message, ', '), '#skip') == 'false'
 
       - name: Bump version and push tag
-        uses: anothrNick/github-tag-action@1.26.0
+        uses: anothrNick/github-tag-action@eca2b69f9e2c24be7decccd0f15fdb1ea5906598
         
         if: contains(join(github.event.commits.*.message, ', '), '#skip') == 'false'
         
