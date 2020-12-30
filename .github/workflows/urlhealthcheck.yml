@@ -1,12 +1,15 @@
 name: Check the deployed service URL
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches: [master]
-    types: [opened, synchronize]
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '*/15 * * * *'
+  # push:
+  #   branches:
+  #     - master
+  # pull_request:
+  #   branches: [master]
+  #   types: [opened, synchronize]
 
 jobs:  
   Check_the_deployed_service_URL:
