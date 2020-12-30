@@ -8,7 +8,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'push' }}
+    # if: ${{ github.event_name == 'push' }}
+    env:
+          COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
+    if: contains(join(COMMIT_MESSAGES, ', '), '#skip') === 'false'
     steps:
       - uses: actions/checkout@v2
 
