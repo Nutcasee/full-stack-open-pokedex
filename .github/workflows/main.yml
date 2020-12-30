@@ -21,7 +21,7 @@ jobs:
 
           rollbackonhealthcheckfailed: true
 
-      - uses: actions/checkout@v2
+      # - uses: actions/checkout@v2
         with:
           fetch-depth: '0'
       - name: Bump version and push tag
