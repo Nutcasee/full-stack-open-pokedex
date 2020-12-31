@@ -3,12 +3,13 @@ name: Hello World!
 on:
   push:
     branches:
-      - master
+      - crazy-experiment
 
 jobs:
   hello_world_job:
     runs-on: ubuntu-18.04
-    if: ${{ github.event_name == 'push' }}
+    # if: ${{ github.event_name == 'push' }}
+    if: contains(join(github.event.commits.*.message, ', '), '#skip') == 'false'
     steps:
       - name: Say hello
         run: |

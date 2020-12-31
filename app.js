@@ -1,5 +1,5 @@
 const express = require('express')
-const app = express()jhkhkjhkjhkjhkjhkjhkjhkjhkjhkjhk 
+const app = express()
 // simulate a situation where your application breaks down and ensure that the check detects the problem. 
 
 // Heroku dynamically sets a port
