@@ -23,10 +23,10 @@ jobs:
           checkstring: ok
           rollbackonhealthcheckfailed: true
       
-      # - name: Bump version and push tag
-      #   uses: anothrNick/github-tag-action@1.26.0
-      #   if: contains(join(github.event.commits.*.message, ', '), '#skip') == 'false'
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     DEFAULT_BUMP: patch
-      #     WITH_V: true
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@1.26.0
+        if: contains(join(github.event.commits.*.message, ', '), '#skip') == 'false'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEFAULT_BUMP: patch
+          WITH_V: true
